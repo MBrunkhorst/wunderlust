@@ -1,0 +1,711 @@
+/* Mia Brunkhorst */
+
+/* CSS reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Start Styles For wunderlust-majorica.html */
+
+/* Import font family */
+@import url('https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,CRSV,MONO@-1,300,0.3,1,0.27&display=swap');
+
+:root {
+    font-size: 16px;
+    --heading-font: Molle, sans-serif;
+    --fonts: Montserrat, sans-serif;
+    --yellow: #F6D64A;
+    --teal: #55BCD5;
+    --purple: #9B26B0;
+    --blue: #499BD2;
+    --dark-gray: #222222;
+    --light-gray: #EAEAEA;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+/* ----- SKIP LINK STYLES ----- */
+/* skip link styles from: https://webaim.org/techniques/css/invisiblecontent/ */
+#skip {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+#skip:focus {
+    position: static;
+    width: auto;
+    height: auto;
+}
+
+/* ----- BODY STYLES ----- */
+body {
+    font-family: var(--fonts);
+    color: var(--black);
+    line-height: 1.35;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+}
+
+/* ----- HEADINGS STYLES ----- */
+h1,
+h2,
+h3 {
+    font-family: var(--heading-font);
+}
+
+h1 {
+    font-size: 3.125rem;
+}
+
+h2,
+h3 {
+    font-size: 2.5rem;
+}
+
+h4 {
+    font-size: 1.625rem;
+    font-weight: semi-bold;
+}
+
+/* ----- HEADER STYLES ----- */
+
+header {
+    background-image: linear-gradient(var(--teal), var(--white));
+    padding-bottom: 2rem;
+}
+
+/* ----- NAVIGATION STYLES ----- */
+
+
+/* ----- HIDDEN CONTENT STYLES ----- */
+
+/* hidden heading styles from: https://webaim.org/techniques/css/invisiblecontent/ */
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* Style for the menu label, which will act as the button */
+
+#menu-toggle {
+    text-transform: uppercase;
+    font-weight: semi-bold;
+}
+
+#menu-toggle label {
+    display: block;
+    background-color: var(--yellow);
+    text-align: center;
+    padding: 0.5em 2em;
+    color: var(--black);
+    cursor: pointer;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 33%;
+    z-index: 1000;
+}
+
+/* Hide the checkbox */
+#menu-toggle input {
+    display: none;
+}
+
+/* Style for the menu when the hidden checkbox is checked */
+#toggle:checked+label {
+    display: block;
+    background-color: var(--black);
+    color: var(--white);
+    width: 100%;
+    top: 0;
+    padding: 1em 0;
+}
+
+/* Style for the menu list items */
+#menu-toggle ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    width: 100%;
+}
+
+#menu-toggle ul li {
+    border-bottom: solid black 1px;
+    text-align: center;
+}
+
+/* Style for the menu list links */
+#menu-toggle ul li a {
+    display: block;
+    background-color: var(--teal);
+    padding: 30px 10px;
+    color: var(--black);
+    text-decoration: none;
+    top: 53px;
+}
+
+/* Display the menu when the hidden checkbox is checked */
+#toggle:checked+label+ul {
+    display: block;
+}
+
+/* ----- TEXT STYLES ----- */
+h1,
+h2,
+p {
+    padding: 0.25rem 2rem;
+}
+
+/* ----- INTRO STYLES ----- */
+
+#intro {
+    margin: 15px 0;
+}
+
+#intro img {
+    margin: .25rem 0;
+    width: 100%;
+    height: auto;
+}
+
+/* ----- PLAN STYLES ----- */
+
+#plan {
+    background-color: var(--yellow);
+    padding: 1.5rem 2.5rem;
+}
+
+#plan section {
+    border: 3px solid var(--white);
+    border-radius: 15px;
+    margin: 1rem 0;
+    padding: 1.5rem;
+    background-color: var(--teal);
+    text-align: center;
+}
+
+#plan h4 {
+    text-transform: uppercase;
+}
+
+#plan img {
+    margin-top: 1rem;
+}
+
+
+/* ----- TESTIMONIAL STYLES ----- */
+#testimonials {
+    margin: 2.5rem;
+}
+
+#testimonials div {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-content: center;
+}
+
+#testimonials div section {
+    display: grid;
+    text-align: center;
+    justify-items: center;
+    padding-bottom: 1rem;
+}
+
+#testimonials h4 {
+    text-transform: uppercase;
+    font-weight: semi-bold;
+    font-size: 1.875rem;
+}
+
+#testimonials q {
+    font-size: 1.25rem;
+    font-style: italic;
+}
+
+#testimonials q::before {
+    content: "\201C";
+}
+
+#testimonials q::after {
+    content: "\201D";
+}
+
+/* ----- ABOUT STYLES ----- */
+#about {
+    padding: 1rem 2.5rem;
+    background-color: var(--blue);
+}
+
+#about div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+    padding-right: 20px;
+    font-size: 1.25rem;
+}
+
+#about div h4 {
+    text-transform: uppercase;
+    font-weight: semi-bold;
+}
+
+#about div p {
+    padding: 0;
+}
+
+#about div section {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: flex-start;
+    text-align: center;
+    padding: 0;
+    gap: 5px;
+}
+
+#about div section img {
+    height: 100px;
+    width: auto;
+}
+
+#about div section:first-of-type p {
+    visibility: hidden;
+    line-height: 0;
+    height: 20px;
+}
+
+#about div section:first-of-type p::after {
+    content: "1,405 mi sq";
+    visibility: visible;
+    display: block;
+}
+
+/* ----- CONTACT STYLES ----- */
+
+#contact {
+    padding: 1rem 2.5rem;
+}
+
+#contact div {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-content: center;
+}
+
+/* ----- FORM STYLES ----- */
+
+form input,
+form select {
+    height: 75px;
+    font-size: 1.25rem;
+    padding-left: 10px;
+    border: 3px solid var(--purple);
+    margin-bottom: 1rem;
+}
+
+form label {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    font-weight: semi-bold;
+}
+
+.required {
+    color: var(--purple);
+    padding: 2px;
+}
+
+fieldset {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+}
+
+select {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    padding: 0 1em 0 0;
+    margin: 0;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+    outline: none;
+    cursor: pointer;
+}
+
+.custom-select::after {
+    content: "";
+    width: 0.8em;
+    height: 0.5em;
+    background-color: var(--select-arrow);
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+}
+
+.custom-select {
+    display: grid;
+    grid-template-areas: "select";
+}
+
+/*idk come back to this later*/
+
+#mySubmit {
+    background-color: var(--purple);
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: semi-bold;
+}
+
+/* ----- FOOTER STYLES ----- */
+footer {
+    background-color: var(--light-gray);
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+    justify-items: center;
+    padding: 1rem 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+
+/* ----- MEDIA QUERIES ----- */
+
+/* ----- TABLET ----- */
+
+@media screen and (min-width: 768px) {
+    /* NAV STYLES */
+    /* come back and do this */
+
+    #intro h2,
+    #intro p {
+        padding: 0;
+    }
+
+    /* INTRO STYLES */
+    #intro {
+        margin: 1rem 5rem;
+    }
+
+    #img-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    #img-grid picture {
+        grid-column: 1 / span 2;
+    }
+
+    /* PLAN STYLES */
+
+    #plan {
+        padding: 1rem 5rem;
+    }
+
+    #plan div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    #plan div section {
+        margin: 0;
+    }
+
+    /* TESTIMONIAL STYLES */
+
+    #testimonials {
+        margin: 2.5rem 5rem;
+    }
+
+    #testimonials h3 {
+        padding-bottom: 1rem;
+    }
+
+    #testimonials div {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* ABOUT STYLES */
+    #about {
+        padding: 1rem 5rem;
+    }
+
+    #about div {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    /* CONTACT STYLES */
+
+    #contact {
+        padding: 1rem 5rem;
+    }
+
+    #contact fieldset {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+
+    #mySubmit {
+        width: 50%;
+        margin-left: auto;
+    }
+
+    /* FOOTER STYLES */
+    footer {
+        padding-top: 1.5rem;
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+}
+
+
+/* ----- MEDIA QUERIES ----- */
+
+/* ----- Desktop/Laptop/Large Screen ----- */
+
+@media screen and (min-width: 1024px) {
+    /* NAV STYLES */
+    /* come back and do this */
+
+    /* INTRO STYLES */
+
+    #intro {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        align-items: center;
+        gap: 20px;
+    }
+
+    #intro h2,
+    #intro p {
+        grid-column: 1;
+        /* place h2 and p in the first column */
+    }
+
+    #intro h2 {
+        grid-row: 1;
+        /* h2 takes the first row */
+    }
+
+    #intro p {
+        grid-row: 2;
+        /* p takes the second row */
+    }
+
+    #img-grid {
+        grid-column: 2;
+        /* place img-grid in the second column */
+        grid-row: 1 / span 2;
+        /* img-grid spans across the first and second rows */
+    }
+
+    /* PLAN STYLES */
+
+    #plan {
+        padding: 5rem;
+    }
+
+    #plan div {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* TESTIMONIAL STYLES */
+
+    #testimonials div {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* ABOUT STYLES */
+
+    #about div section img {
+        height: 100%;
+        width: auto;
+    }
+
+    #about div section:first-of-type p {
+        visibility: visible;
+    }
+
+    #about div section:first-of-type p::after {
+        display: none;
+    }
+
+    /* CONTACT STYLES */
+
+
+
+    /* FOOTER STYLES */
+    footer {
+        justify-items: start;
+    }
+
+    footer p {
+        padding-left: 5rem;
+    
+    }
+
+    footer a {
+        justify-self: flex-end;
+    }
+
+    footer a:last-of-type {
+        padding-right: 6rem;
+    }
+
+
+}
